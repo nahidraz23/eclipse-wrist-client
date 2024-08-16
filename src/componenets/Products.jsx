@@ -1,44 +1,123 @@
-import React, { useContext, useEffect, useState } from 'react';
 import ProductCard from './ProductCard';
-import { AuthContext } from '../Providers/AuthProvider';
+import useWatchCount from '../hooks/useWatchCount';
+import { useEffect, useState } from 'react';
 import useAxiosPublic from '../hooks/useAxiosPublic';
-import useWatches from '../hooks/useWatches';
+
 
 const Products = () => {
+    const axiosPublic = useAxiosPublic();
+    const [watchesCount] = useWatchCount();
+    const [currentPage, setCurrentPage] = useState(0);
+    const [watches, setWatches] = useState(null)
+    const [searchText, setSearchText] = useState(null)
+    const [loading, setLoading] = useState(true)
 
-    // const { watches, setLoading } = useContext(AuthContext);
-    // const axiosPublic = useAxiosPublic();
-    const [watcheCount, setWatchCount] = useState(null);
+    const itemsPerPage = 10;
+    const totalPages = Math.ceil(watchesCount / itemsPerPage);
 
-    const [watches] = useWatches();
-    // console.log(watches)
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axiosPublic.get(`/searchWatches?search=${searchText}`)
+                return setWatches(res.data)
+            }
+            catch (err) {
+                console.error(err)
+            }
+            finally {
+                setLoading(false);
+            }
+        }
+        fetchData()
+    }, [loading, searchText])
 
-    // axiosPublic.get('/watchesCount')
-    //     .then(res => setWatchCount(res.data.count))
-    //     .catch((err) => console.error(err))
-    //     .finally(() => {
-    //         setLoading(false)
-    //     })
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axiosPublic.get(`/watches?page=${currentPage}&size=${itemsPerPage}`)
+                return setWatches(res.data)
+            }
+            catch (err) {
+                console.error(err)
+            }
+            finally {
+                setLoading(false);
+            }
+        }
+        fetchData()
+    }, [loading, currentPage, itemsPerPage])
 
-    // const itemsPerPage = 10;
-    // const totalPages = Math.ceil(watcheCount / itemsPerPage);
-    // console.log(totalPages)
+    const pages = [];
+    for (let i = 0; i < totalPages; i++) {
+        pages.push(i);
+    }
+
+    console.log(pages)
+
+    const handleCustomClick = (page) => {
+        setCurrentPage(page);
+    }
+
+    const handlePrevBtn = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    }
+
+    const handleNextBtn = () => {
+        if (currentPage < pages.length) {
+            setCurrentPage(currentPage + 1);
+        }
+    }
+
+    const handleSearch = e => {
+        e.preventDefault();
+        const searchText = e.target.search.value;
+        console.log(searchText)
+        setSearchText(searchText)
+    }
 
     return (
         <div className='min-h-screen'>
-            <div className='grid grid-cols-3 gap-8'>
+            <div className='py-8'>
+                <form onSubmit={handleSearch} className='space-x-2 flex items-center justify-center'>
+                    <input name='search' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                    <input type="submit" value="Search" className='btn' />
+                </form>
+
+            </div>
+            {
+                loading ?
+                    <progress className="progress w-56"></progress>
+                    :
+                    <div className='grid grid-cols-3 gap-8'>
+                        {
+                            watches.map((item, index) => <ProductCard
+                                key={index}
+                                title={item.name}
+                                image={item.image}
+                                description={item.description}
+                                price={item.price}
+                                category={item.category}
+                                rating={item.rating}
+                                date_time={item.date_time}
+                            ></ProductCard>)
+                        }
+                    </div>
+            }
+            <div className='flex justify-center gap-2 py-8'>
+                <div>
+                    <button onClick={handlePrevBtn} className='btn '>Prev</button>
+                </div>
                 {
-                    watches.map((item, index) => <ProductCard
-                        key={index}
-                        title={item.name}
-                        image={item.image}
-                        description={item.description}
-                        price={item.price}
-                        category={item.category}
-                        rating={item.rating}
-                        date_time={item.date_time}
-                    ></ProductCard>)
+                    pages.map((page, index) => <button
+                        onClick={() => handleCustomClick(page)}
+                        className={currentPage === page ? 'bg-red-400 btn space-x-2' : undefined}
+                        key={index}>{page}</button>)
                 }
+                <div>
+                    <button onClick={handleNextBtn} className='btn '>Next</button>
+                </div>
             </div>
         </div>
     );
