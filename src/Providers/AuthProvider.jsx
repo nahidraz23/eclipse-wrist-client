@@ -13,14 +13,16 @@ const AuthProvider = ({ children }) => {
 
     const axios = useAxiosPublic();
 
-    axios.get('/watches')
-        .then(res =>
-            setWatches(res.data)
-        )
-        .catch(err => console.error(err))
-        .finally(() => setLoading(false))
+    // axios.get('/watches')
+    //     .then(res =>
+    //         setWatches(res.data)
+    //     )
+    //     .catch(err => console.error(err))
+    //     .finally(() => {
+    //         setLoading(false)
+    //     })
 
-    // console.log(watches)
+    // console.log(watches)    
 
     // useEffect(() => {
     //     async function fetchData() {

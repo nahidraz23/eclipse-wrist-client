@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { AuthContext } from './AuthProvider';
+import useWatches from '../hooks/useWatches';
 
 const HandleLoading = ({ children }) => {
     const { loading } = useContext(AuthContext);
+    const [isLoading] = useWatches();
 
-    if (loading) {
-        return <progress className="progress w-56"></progress>
-    }
+    // if (isLoading) {
+    //     return <progress className="progress w-56"></progress>
+    // }
 
     return children;
 };
