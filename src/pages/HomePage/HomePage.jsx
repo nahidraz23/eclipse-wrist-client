@@ -1,9 +1,10 @@
 import React from 'react';
+import Products from '../../componenets/Products';
 
 const HomePage = () => {
     return (
-        <div>
-            This is homepage.
+        <div className='min-h-screen'>
+            <Products></Products>
         </div>
     );
 };

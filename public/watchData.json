@@ -1,0 +1,182 @@
+[
+    {
+      "name": "Rolex Submariner Date",
+      "image": "https://lunns.com/cdn/shop/files/m126619lb-0003_collection_upright_landscape_400x.png?v=1687260166",
+      "description": "The Rolex Submariner Date is a classic dive watch featuring a 40mm stainless steel case, black dial, and unidirectional rotatable bezel.",
+      "price": 12500,
+      "category": "Dive Watch",
+      "rating": 4.9,
+      "date_time": "2024-08-14T14:30:00Z"
+    },
+    {
+      "name": "Rolex Daytona",
+      "image": "https://www.diamondcellar.com/cdn/shop/files/m126506-0001_drp-upright-bba-with-shadow.png?v=1720715919",
+      "description": "The Rolex Daytona is an iconic chronograph watch with a 40mm oystersteel case, black ceramic bezel, and silver dial with black subdials.",
+      "price": 31000,
+      "category": "Chronograph",
+      "rating": 4.8,
+      "date_time": "2024-08-14T14:31:00Z"
+    },
+    {
+      "name": "Rolex Datejust 41",
+      "image": "https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-main-configurator/c_limit,w_2440/v1/catalogue/2024/upright-c/m126334-0001",
+      "description": "The Rolex Datejust 41 features a 41mm oystersteel and yellow gold case, champagne dial, and a fluted bezel, offering a timeless aesthetic.",
+      "price": 14200,
+      "category": "Dress Watch",
+      "rating": 4.7,
+      "date_time": "2024-08-14T14:32:00Z"
+    },
+    {
+      "name": "Rolex GMT-Master II",
+      "image": "https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-main-configurator/c_limit,w_2440/v1/catalogue/2024/upright-c/m126710grnr-0004",
+      "description": "The Rolex GMT-Master II is a dual time zone watch with a 40mm oystersteel case, black dial, and a bidirectional rotatable bezel with a 24-hour insert.",
+      "price": 18000,
+      "category": "Travel Watch",
+      "rating": 4.9,
+      "date_time": "2024-08-14T14:33:00Z"
+    },
+    {
+      "name": "Rolex Oyster Perpetual 36",
+      "image": "https://www.prestigetime.com/images/watches/126000-Silver.jpg",
+      "description": "The Rolex Oyster Perpetual 36 is an elegant timepiece with a 36mm stainless steel case, bright blue dial, and a smooth bezel.",
+      "price": 7500,
+      "category": "Dress Watch",
+      "rating": 4.6,
+      "date_time": "2024-08-14T14:34:00Z"
+    },
+    {
+      "name": "Rolex Yacht-Master 40",
+      "image": "https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-majesty/c_limit,w_2440/v1/catalogue/2024/upright-c/m126622-0001",
+      "description": "The Rolex Yacht-Master 40 is a luxury sports watch with a 40mm oystersteel and platinum case, blue dial, and a bidirectional rotatable bezel.",
+      "price": 25000,
+      "category": "Dive Watch",
+      "rating": 4.8,
+      "date_time": "2024-08-14T14:35:00Z"
+    },
+    {
+      "name": "Rolex Explorer II",
+      "image": "https://media.rolex.com/image/upload/q_auto/f_auto/t_v7-main-configurator/c_limit,w_2440/v1/catalogue/2024/upright-c/m226570-0001",
+      "description": "The Rolex Explorer II is a rugged timepiece with a 42mm oystersteel case, white dial, and a 24-hour fixed bezel, designed for adventurers.",
+      "price": 9500,
+      "category": "Travel Watch",
+      "rating": 4.7,
+      "date_time": "2024-08-14T14:36:00Z"
+    },
+    {
+      "name": "Rolex Sky-Dweller",
+      "image": "https://www.hlgross.com/cdn/shop/files/m336934-0004_drp-upright-bba-with-shadow.png?v=1720529242",
+      "description": "The Rolex Sky-Dweller is a sophisticated watch with a 42mm oystersteel and white gold case, black dial, and an annual calendar with dual time zones.",
+      "price": 38000,
+      "category": "Travel Watch",
+      "rating": 4.9,
+      "date_time": "2024-08-14T14:37:00Z"
+    },
+    {
+      "name": "Rolex Day-Date 40",
+      "image": "https://davidmrobinson.co.uk/wp-content/uploads/2024/07/m228239-0076_drp-upright-bba-with-shadow.webp",
+      "description": "The Rolex Day-Date 40, also known as the President's Watch, features a 40mm 18ct yellow gold case, champagne dial, and the iconic President bracelet.",
+      "price": 36500,
+      "category": "Dress Watch",
+      "rating": 4.8,
+      "date_time": "2024-08-14T14:38:00Z"
+    },
+    {
+      "name": "Rolex Milgauss",
+      "image": "https://watchesoff5th.com/cdn/shop/products/rolex-steel-milgauss-watch-green-crystal-116400gv-custom-mad-in-time-dial-371442_600x600_crop_center.jpg?v=1686698062",
+      "description": "The Rolex Milgauss is a unique watch with a 40mm oystersteel case, Z-blue dial, and an orange lightning-bolt seconds hand, resistant to magnetic fields.",
+      "price": 8200,
+      "category": "Specialty Watch",
+      "rating": 4.7,
+      "date_time": "2024-08-14T14:39:00Z"
+    },
+    {
+        "name": "Omega Seamaster Diver 300M",
+        "image": "https://www.omegawatches.com/media/catalog/product/o/m/omega-seamaster-diver-300m-co-axial-master-chronometer-42-mm-21030422003001-watch-wrist-cfa6c7.png",
+        "description": "The Omega Seamaster Diver 300M is a professional dive watch with a 42mm stainless steel case, blue ceramic bezel, and wave-patterned dial.",
+        "price": 5200,
+        "category": "Dive Watch",
+        "rating": 4.8,
+        "date_time": "2024-08-14T14:30:00Z"
+      },
+      {
+        "name": "Omega Speedmaster Professional Moonwatch",
+        "image": "https://www.ap-watches.com/ap-watches/fotos/omega-speedmaster-professional-moonwatch-42-mm-1603795744.png",
+        "description": "The Omega Speedmaster Professional Moonwatch is an iconic chronograph watch that was part of all six lunar missions, featuring a 42mm stainless steel case and black dial.",
+        "price": 6300,
+        "category": "Chronograph",
+        "rating": 4.9,
+        "date_time": "2024-08-14T14:31:00Z"
+      },
+      {
+        "name": "Omega Constellation Co-Axial Master Chronometer 39mm",
+        "image": "https://www.omegawatches.com/media/catalog/product/o/m/omega-constellation-co-axial-master-chronometer-39-mm-13110392002001-90e229.png?w=2000",
+        "description": "The Omega Constellation is a luxury watch with a 39mm stainless steel and yellow gold case, silver dial, and a star-studded design.",
+        "price": 9500,
+        "category": "Dress Watch",
+        "rating": 4.7,
+        "date_time": "2024-08-14T14:32:00Z"
+      },
+      {
+        "name": "Omega Seamaster Aqua Terra 150M",
+        "image": "https://www.kennedy.com.au/app/uploads/2022/11/Omega_22010412103004_Gallery1.webp",
+        "description": "The Omega Seamaster Aqua Terra 150M is a versatile watch with a 41mm stainless steel case, teak-patterned blue dial, and a water resistance of 150 meters.",
+        "price": 5400,
+        "category": "Casual Watch",
+        "rating": 4.6,
+        "date_time": "2024-08-14T14:33:00Z"
+      },
+      {
+        "name": "Omega De Ville Prestige Co-Axial 39.5mm",
+        "image": "https://zimsonwatches.com/cdn/shop/files/omega-de-ville-prestige-co-axial-chronometer-395_mm-42410402003002-377882.png?v=1710831972",
+        "description": "The Omega De Ville Prestige is a classic dress watch with a 39.5mm stainless steel case, opaline silver dial, and a slim profile.",
+        "price": 4200,
+        "category": "Dress Watch",
+        "rating": 4.5,
+        "date_time": "2024-08-14T14:34:00Z"
+      },
+      {
+        "name": "Omega Planet Ocean 600M Co-Axial Master Chronometer 43.5mm",
+        "image": "https://content.thewosgroup.com/productimage/17331280/17331280_1.jpg",
+        "description": "The Omega Planet Ocean 600M is a high-performance dive watch with a 43.5mm stainless steel case, orange ceramic bezel, and black dial.",
+        "price": 6800,
+        "category": "Dive Watch",
+        "rating": 4.8,
+        "date_time": "2024-08-14T14:35:00Z"
+      },
+      {
+        "name": "Omega Seamaster 300 Co-Axial Master Chronometer 41mm",
+        "image": "https://davidmrobinson.co.uk/wp-content/uploads/2021/09/Blue-Dial-PS.png",
+        "description": "The Omega Seamaster 300 is a vintage-inspired dive watch with a 41mm stainless steel case, sand-blasted black dial, and a retro design.",
+        "price": 6200,
+        "category": "Dive Watch",
+        "rating": 4.7,
+        "date_time": "2024-08-14T14:36:00Z"
+      },
+      {
+        "name": "Omega Speedmaster Racing Co-Axial Master Chronometer 44.25mm",
+        "image": "https://www.quera.es/media/catalog/product/cache/5daf542baadf58b9746fc06ac4bf60aa/3/2/32930445104001_q.jpg",
+        "description": "The Omega Speedmaster Racing is a sporty chronograph with a 44.25mm stainless steel case, black dial with racing-inspired elements, and a tachymeter scale.",
+        "price": 7800,
+        "category": "Chronograph",
+        "rating": 4.9,
+        "date_time": "2024-08-14T14:37:00Z"
+      },
+      {
+        "name": "Omega De Ville Trésor 40mm",
+        "image": "https://weirandsons.ie/media/catalog/product/cache/1ec82fda87df77e12832c47afe37f2ae/0/1/01-136076_1.jpg",
+        "description": "The Omega De Ville Trésor is an elegant dress watch with a 40mm stainless steel case, blue dial, and a minimalist design.",
+        "price": 5100,
+        "category": "Dress Watch",
+        "rating": 4.6,
+        "date_time": "2024-08-14T14:38:00Z"
+      },
+      {
+        "name": "Omega Globemaster Co-Axial Master Chronometer 39mm",
+        "image": "https://zadok.com/wp-content/uploads/omega-130-30-39-21-03-001-1-1024x1024.jpg",
+        "description": "The Omega Globemaster is a precision timepiece with a 39mm stainless steel case, fluted bezel, and pie-pan blue dial, certified as a Master Chronometer.",
+        "price": 5900,
+        "category": "Dress Watch",
+        "rating": 4.7,
+        "date_time": "2024-08-14T14:39:00Z"
+      }
+  ]

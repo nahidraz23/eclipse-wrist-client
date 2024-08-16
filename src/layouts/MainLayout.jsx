@@ -7,7 +7,7 @@ const MainLayout = () => {
     return (
         <div>
             <Navabar></Navabar>
-            <div className='h-screen'>
+            <div className='min-h-screen container mx-auto py-4'>
                 <Outlet></Outlet>
             </div>
             <Footer></Footer>
