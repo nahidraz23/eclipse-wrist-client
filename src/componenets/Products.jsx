@@ -6,16 +6,17 @@ import useAxiosPublic from '../hooks/useAxiosPublic';
 
 const Products = () => {
     const axiosPublic = useAxiosPublic();
-    const [watchesCount] = useWatchCount();
+    // const [watchesCount] = useWatchCount();
 
     const [currentPage, setCurrentPage] = useState(0);
     const [watches, setWatches] = useState(null)
     const [searchText, setSearchText] = useState(null)
     const [loading, setLoading] = useState(true);
     const [asc, setAsc] = useState(true);
+    const [pagination, setPagination] = useState(null)
 
     const itemsPerPage = 10;
-    const totalPages = Math.ceil(watchesCount / itemsPerPage);
+    const totalPages = Math.ceil(pagination / itemsPerPage);
 
     useEffect(() => {
         async function fetchData() {
@@ -63,12 +64,29 @@ const Products = () => {
             }
         }
         fetchData()
-    }, [loading, currentPage, itemsPerPage])
+    }, [loading,currentPage, itemsPerPage])
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const res = await axiosPublic.get(`/pagination`)
+                return setPagination(res.data.count)
+            }
+            catch (err) {
+                console.error(err)
+            }
+            finally {
+                setLoading(false);
+            }
+        }
+        fetchData()
+    }, [loading, pagination])
 
     const pages = [];
     for (let i = 0; i < totalPages; i++) {
         pages.push(i);
     }
+    console.log(pages)
 
     const handleCustomClick = (page) => {
         setCurrentPage(page);
