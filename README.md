@@ -91,9 +91,9 @@ Replace "your-username" and "your-repo-name" with your GitHub username and repos
 
 ## Features
 
--Searching using keyword
--Sorting based on price, date, and time
--Select specific category to get desired product efficiently
+- **Searching using keyword**
+- **Sorting based on price, date, and time**
+- **Select specific category to get desired product efficiently**
 
 ## Contributing
 
