@@ -1,7 +1,16 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProvider';
 
 const Navabar = () => {
+
+    const {user, signOutUser} = useContext(AuthContext);
+
+    // console.log(user)
+
+    const handleSignOut = () => {
+        signOutUser()
+    }
 
     const navLinks = (
         <div className='flex gap-8 text-lg font-semibold'>
@@ -48,7 +57,12 @@ const Navabar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn font-semibold btn-accent text-white text-lg">Sign In</a>
+                {
+                    user ?
+                    <button onClick={handleSignOut} className="btn font-semibold btn-accent text-white text-lg">Sign Out</button>
+                    :
+                    <Link to={'/login'} className="btn font-semibold btn-accent text-white text-lg">Sign In</Link>
+                }
             </div>
         </div>
     );
