@@ -7,6 +7,7 @@ import useAxiosPublic from '../hooks/useAxiosPublic';
 const Products = () => {
     const axiosPublic = useAxiosPublic();
     const [watchesCount] = useWatchCount();
+    
     const [currentPage, setCurrentPage] = useState(0);
     const [watches, setWatches] = useState(null)
     const [searchText, setSearchText] = useState(null)
@@ -88,7 +89,6 @@ const Products = () => {
     const handleSearch = e => {
         e.preventDefault();
         const searchText = e.target.search.value;
-        console.log(searchText)
         setSearchText(searchText)
     }
 
