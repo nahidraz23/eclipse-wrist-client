@@ -10,7 +10,8 @@ const Products = () => {
     const [currentPage, setCurrentPage] = useState(0);
     const [watches, setWatches] = useState(null)
     const [searchText, setSearchText] = useState(null)
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true);
+    const [asc, setAsc] = useState(true);
 
     const itemsPerPage = 10;
     const totalPages = Math.ceil(watchesCount / itemsPerPage);
@@ -34,6 +35,22 @@ const Products = () => {
     useEffect(() => {
         async function fetchData() {
             try {
+                const res = await axiosPublic.get(`/sortWatches?sort=${asc ? 'asc' : 'desc'}`)
+                return setWatches(res.data)
+            }
+            catch (err) {
+                console.error(err)
+            }
+            finally {
+                setLoading(false);
+            }
+        }
+        fetchData()
+    }, [asc])
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
                 const res = await axiosPublic.get(`/watches?page=${currentPage}&size=${itemsPerPage}`)
                 return setWatches(res.data)
             }
@@ -52,14 +69,12 @@ const Products = () => {
         pages.push(i);
     }
 
-    console.log(pages)
-
     const handleCustomClick = (page) => {
         setCurrentPage(page);
     }
 
     const handlePrevBtn = () => {
-        if (currentPage > 1) {
+        if (currentPage > 0) {
             setCurrentPage(currentPage - 1);
         }
     }
@@ -79,18 +94,20 @@ const Products = () => {
 
     return (
         <div className='min-h-screen'>
-            <div className='py-8'>
+            <div className='md:py-8 flex items-center justify-evenly'>
                 <form onSubmit={handleSearch} className='space-x-2 flex items-center justify-center'>
                     <input name='search' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
                     <input type="submit" value="Search" className='btn' />
                 </form>
-
+                <div>
+                    <button onClick={() => setAsc(!asc)} className='btn'>{asc ? 'Price: High to Low' : 'Price: Low to High'}</button>
+                </div>
             </div>
             {
                 loading ?
                     <progress className="progress w-56"></progress>
                     :
-                    <div className='grid grid-cols-3 gap-8'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                         {
                             watches.map((item, index) => <ProductCard
                                 key={index}
