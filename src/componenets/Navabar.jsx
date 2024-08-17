@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const Navabar = () => {
 
     const navLinks = (
-        <div className='flex gap-8 text-lg'>
+        <div className='flex gap-8 text-lg font-semibold'>
             <NavLink>Home</NavLink>
             <NavLink>Men's Collection</NavLink>
             <NavLink>Women's Collection</NavLink>
@@ -38,7 +38,7 @@ const Navabar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">EclipseWrist</a>
+                <a className="text-2xl font-bold">EclipseWrist</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -48,7 +48,7 @@ const Navabar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Sign In</a>
+                <a className="btn font-semibold btn-accent text-white text-lg">Sign In</a>
             </div>
         </div>
     );

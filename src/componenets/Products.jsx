@@ -7,7 +7,7 @@ import useAxiosPublic from '../hooks/useAxiosPublic';
 const Products = () => {
     const axiosPublic = useAxiosPublic();
     const [watchesCount] = useWatchCount();
-    
+
     const [currentPage, setCurrentPage] = useState(0);
     const [watches, setWatches] = useState(null)
     const [searchText, setSearchText] = useState(null)
@@ -81,7 +81,7 @@ const Products = () => {
     }
 
     const handleNextBtn = () => {
-        if (currentPage < pages.length) {
+        if (currentPage < pages.length - 1) {
             setCurrentPage(currentPage + 1);
         }
     }
@@ -97,10 +97,10 @@ const Products = () => {
             <div className='md:py-8 flex items-center justify-evenly'>
                 <form onSubmit={handleSearch} className='space-x-2 flex items-center justify-center'>
                     <input name='search' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
-                    <input type="submit" value="Search" className='btn' />
+                    <input type="submit" value="Search" className='btn btn-success text-white' />
                 </form>
                 <div>
-                    <button onClick={() => setAsc(!asc)} className='btn'>{asc ? 'Price: High to Low' : 'Price: Low to High'}</button>
+                    <button onClick={() => setAsc(!asc)} className='btn btn-info text-white'>{asc ? 'Price: High to Low' : 'Price: Low to High'}</button>
                 </div>
             </div>
             {
@@ -129,7 +129,7 @@ const Products = () => {
                 {
                     pages.map((page, index) => <button
                         onClick={() => handleCustomClick(page)}
-                        className={currentPage === page ? 'bg-red-400 btn space-x-2' : undefined}
+                        className={currentPage === page ? 'bg-secondary text-white btn space-x-2' : undefined}
                         key={index}>{page}</button>)
                 }
                 <div>
